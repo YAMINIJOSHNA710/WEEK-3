@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Blog Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header"
+                "nav"
+                "main"
+                "sidebar"
+                "footer";
+            grid-template-columns: 1fr;
+        }
+        header {
+            grid-area: header;
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            grid-area: nav;
+            background: #444;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            grid-area: main;
+            padding: 1rem;
+        }
+        aside {
+            grid-area: sidebar;
+            background: #f4f4f4;
+            padding: 1rem;
+        }
+        footer {
+            grid-area: footer;
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        @media(min-width: 768px) {
+            .container {
+                grid-template-areas: 
+                    "header header header"
+                    "nav nav nav"
+                    "main main sidebar"
+                    "footer footer footer";
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        @media(min-width: 1024px) {
+            .container {
+                grid-template-areas: 
+                    "header header header"
+                    "nav nav nav"
+                    "main sidebar sidebar"
+                    "footer footer footer";
+                grid-template-columns: 3fr 1fr;
+            }
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+        nav a:hover {
+            background: #555;
+        }
+        main {
+            overflow: auto;
+        }
+        header {
+            position: relative;
+            z-index: 10;
+        }
+        nav {
+            position: relative;
+            z-index: 5;
+        }
+        footer {
+            position: relative;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Blog</h1>
+        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+        <main>
+            <h2>Blog Post Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan ante.</p>
+            <!-- More blog content here -->
+        </main>
+        <aside>
+            <h3>Sidebar</h3>
+            <p>Related content or links.</p>
+        </aside>
+        <footer>
+            <p>Footer Content &copy; 2024</p>
+        </footer>
+    </div>
+</body>
+</html>
