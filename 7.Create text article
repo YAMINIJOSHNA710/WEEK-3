@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article with Floating Image</title>
+    <style>
+        /* CSS to style the image and text */
+        .float-left {
+            float:left;
+            margin-right: 20px;
+            width: 300px; /* Adjust the image width */
+        }
+        .article-text {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="article">
+        <img src="/download.jpeg" alt="Descriptive Alt Text" class="float-left">
+        <p class="article-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan tortor. Nulla facilisi. Integer
+            euismod velit ac felis tincidunt, ac varius mauris varius.
+        </p>
+        <p class="article-text">
+            Sed non metus dolor. Morbi efficitur, purus id egestas sagittis, ipsum metus placerat magna, et bibendum sem ante 
+            in lectus. Suspendisse potenti. Nulla facilisi.Ut vel condimentum sapien, a posuere mi. Sed tincidunt 
+            malesuada purus, sed hendrerit leo feugiat nec.
+        </p>
+    </div>
+</body>
+</html>
